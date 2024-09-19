@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="test-all" time="5.665" tests="3" failures="0" errors="0">
+   <testsuite name="test-all" tests="3" failures="0" errors="0" time="5.665" skipped="0" timestamp="19-09-2024T12:20:16" hostname="nabilahalizza - 10.21.108.145" id="Test Suites/test-all">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="/Users/nabilahalizza/git/assignment-api/Reports/20240919_122011/test-all/20240919_122011"/>
+         <property name="logFiles" value="/Users/nabilahalizza/git/assignment-api/Reports/20240919_122011/test-all/20240919_122011/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="nabilahalizza - 10.21.108.145"/>
+         <property name="hostAddress" value="10.21.108.145"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="9.6.0.217"/>
+      </properties>
+      <testcase name="Test Cases/tryingGET" time="2.902" classname="Test Cases/tryingGET" status="PASSED">
+         <system-out><![CDATA[19-09-2024T12:20:16 - [TEST_CASE][PASSED] - Test Cases/tryingGET: Test Cases/tryingGET
+
+19-09-2024T12:20:17 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("repoGET", ["userid":1])): Send request successfully
+
+19-09-2024T12:20:19 - [MESSAGE][INFO] - HAR: /Users/nabilahalizza/git/assignment-api/Reports/20240919_122011/test-all/20240919_122011/requests/main/0.har
+
+19-09-2024T12:20:19 - [MESSAGE][PASSED] - Send request successfully
+
+19-09-2024T12:20:19 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+19-09-2024T12:20:19 - [TEST_STEP][PASSED] - result = slurper.parseText(response.getResponseBodyContent()): null
+
+19-09-2024T12:20:19 - [TEST_STEP][PASSED] - id = id: null
+
+19-09-2024T12:20:19 - [TEST_STEP][PASSED] - assert id != null: null
+
+19-09-2024T12:20:19 - [TEST_STEP][PASSED] - assert id instanceof java.lang.Integer: null
+
+19-09-2024T12:20:19 - [TEST_STEP][PASSED] - assert id == 1: null
+
+19-09-2024T12:20:19 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+19-09-2024T12:20:19 - [MESSAGE][PASSED] - Verify response status code successfully
+
+19-09-2024T12:20:19 - [TEST_STEP][PASSED] - verifyMatch("omnis laborum odio", "omnis laborum odio", false): Actual text 'omnis laborum odio' and expected text 'omnis laborum odio' are matched 
+
+19-09-2024T12:20:19 - [MESSAGE][PASSED] - Actual text 'omnis laborum odio' and expected text 'omnis laborum odio' are matched]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/createPOST" time="1.357" classname="Test Cases/createPOST" status="PASSED">
+         <system-out><![CDATA[19-09-2024T12:20:19 - [TEST_CASE][PASSED] - Test Cases/createPOST: Test Cases/createPOST
+
+19-09-2024T12:20:20 - [TEST_STEP][PASSED] - postresponse = sendRequest(findTestObject("repoPOST")): Send request successfully
+
+19-09-2024T12:20:21 - [MESSAGE][INFO] - HAR: /Users/nabilahalizza/git/assignment-api/Reports/20240919_122011/test-all/20240919_122011/requests/main/1.har
+
+19-09-2024T12:20:21 - [MESSAGE][PASSED] - Send request successfully
+
+19-09-2024T12:20:21 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+19-09-2024T12:20:21 - [TEST_STEP][PASSED] - result = slurper.parseText(postresponse.getResponseBodyContent()): null
+
+19-09-2024T12:20:21 - [TEST_STEP][PASSED] - id = id: null
+
+19-09-2024T12:20:21 - [TEST_STEP][PASSED] - assert id != null: null
+
+19-09-2024T12:20:21 - [TEST_STEP][PASSED] - assert id == 101: null
+
+19-09-2024T12:20:21 - [TEST_STEP][PASSED] - verifyResponseStatusCode(postresponse, 201): Verify response status code successfully
+
+19-09-2024T12:20:21 - [MESSAGE][PASSED] - Verify response status code successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/DELETEalbums" time="1.087" classname="Test Cases/DELETEalbums" status="PASSED">
+         <system-out><![CDATA[19-09-2024T12:20:21 - [TEST_CASE][PASSED] - Test Cases/DELETEalbums: Test Cases/DELETEalbums
+
+19-09-2024T12:20:21 - [TEST_STEP][PASSED] - delResponse = sendRequest(findTestObject("repoDELETE")): Send request successfully
+
+19-09-2024T12:20:22 - [MESSAGE][INFO] - HAR: /Users/nabilahalizza/git/assignment-api/Reports/20240919_122011/test-all/20240919_122011/requests/main/2.har
+
+19-09-2024T12:20:22 - [MESSAGE][PASSED] - Send request successfully
+
+19-09-2024T12:20:22 - [TEST_STEP][PASSED] - verifyResponseStatusCode(delResponse, 200): Verify response status code successfully
+
+19-09-2024T12:20:22 - [MESSAGE][PASSED] - Verify response status code successfully
+
+19-09-2024T12:20:22 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+19-09-2024T12:20:22 - [TEST_STEP][PASSED] - result = slurper.parseText(delResponse.getResponseBodyContent()): null
+
+19-09-2024T12:20:22 - [TEST_STEP][PASSED] - userId = userId: null
+
+19-09-2024T12:20:22 - [TEST_STEP][PASSED] - id = id: null
+
+19-09-2024T12:20:22 - [TEST_STEP][PASSED] - title = title: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[19-09-2024T12:20:16 - [TEST_SUITE][PASSED] - test-all: Test Cases/DELETEalbums]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

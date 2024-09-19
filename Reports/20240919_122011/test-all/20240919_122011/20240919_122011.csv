@@ -1,0 +1,31 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+test-all,,,,19-09-2024 12:20:16,19-09-2024 12:20:22,5.665s,PASSED
+,,,,,,,
+Test Cases/tryingGET,,,,19-09-2024 12:20:16,19-09-2024 12:20:19,2.902s,PASSED
+"response = sendRequest(findTestObject(""repoGET"", [""userid"":1]))",,,,19-09-2024 12:20:17,19-09-2024 12:20:19,2.131s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,19-09-2024 12:20:19,19-09-2024 12:20:19,0.016s,PASSED
+result = slurper.parseText(response.getResponseBodyContent()),,,,19-09-2024 12:20:19,19-09-2024 12:20:19,0.041s,PASSED
+id = id,,,,19-09-2024 12:20:19,19-09-2024 12:20:19,0.030s,PASSED
+assert id != null,,,,19-09-2024 12:20:19,19-09-2024 12:20:19,0.005s,PASSED
+assert id instanceof java.lang.Integer,,,,19-09-2024 12:20:19,19-09-2024 12:20:19,0.002s,PASSED
+assert id == 1,,,,19-09-2024 12:20:19,19-09-2024 12:20:19,0.002s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,19-09-2024 12:20:19,19-09-2024 12:20:19,0.045s,PASSED
+"verifyMatch(""omnis laborum odio"", ""omnis laborum odio"", false)",,,,19-09-2024 12:20:19,19-09-2024 12:20:19,0.098s,PASSED
+,,,,,,,
+Test Cases/createPOST,,,,19-09-2024 12:20:19,19-09-2024 12:20:21,1.357s,PASSED
+"postresponse = sendRequest(findTestObject(""repoPOST""))",,,,19-09-2024 12:20:20,19-09-2024 12:20:21,1.172s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,19-09-2024 12:20:21,19-09-2024 12:20:21,0.006s,PASSED
+result = slurper.parseText(postresponse.getResponseBodyContent()),,,,19-09-2024 12:20:21,19-09-2024 12:20:21,0.008s,PASSED
+id = id,,,,19-09-2024 12:20:21,19-09-2024 12:20:21,0.004s,PASSED
+assert id != null,,,,19-09-2024 12:20:21,19-09-2024 12:20:21,0.003s,PASSED
+assert id == 101,,,,19-09-2024 12:20:21,19-09-2024 12:20:21,0.004s,PASSED
+"verifyResponseStatusCode(postresponse, 201)",,,,19-09-2024 12:20:21,19-09-2024 12:20:21,0.004s,PASSED
+,,,,,,,
+Test Cases/DELETEalbums,,,,19-09-2024 12:20:21,19-09-2024 12:20:22,1.087s,PASSED
+"delResponse = sendRequest(findTestObject(""repoDELETE""))",,,,19-09-2024 12:20:21,19-09-2024 12:20:22,0.888s,PASSED
+"verifyResponseStatusCode(delResponse, 200)",,,,19-09-2024 12:20:22,19-09-2024 12:20:22,0.009s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,19-09-2024 12:20:22,19-09-2024 12:20:22,0.003s,PASSED
+result = slurper.parseText(delResponse.getResponseBodyContent()),,,,19-09-2024 12:20:22,19-09-2024 12:20:22,0.002s,PASSED
+userId = userId,,,,19-09-2024 12:20:22,19-09-2024 12:20:22,0.007s,PASSED
+id = id,,,,19-09-2024 12:20:22,19-09-2024 12:20:22,0.030s,PASSED
+title = title,,,,19-09-2024 12:20:22,19-09-2024 12:20:22,0.001s,PASSED
